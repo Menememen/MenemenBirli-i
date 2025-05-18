@@ -1,0 +1,22 @@
+import re
+
+def parola_kontrol(parola):
+    if len(parola) < 8:
+        return "Parola en az 8 karakter içerebilir"
+
+    if not re.search(r"[A-Z]", parola):
+        return "Parola en az 1 büyük karakter içermelidir"
+
+    if not re.search(r"[a-z]", parola):
+        return "Parola en az 1 küçük karakter içermelidir"
+
+    if not re.search(r"[0-9]", parola):
+        return "Parola en az bir rakam içermelidir"
+
+    if not re.search(r"[+-/*!&$#?=@]", parola):
+        return "Parola en az 1 özel karakter içermelidir"
+
+    return "Parola geçerli"
+
+parola = input("Parolanızı girin: ")
+print(parola_kontrol(parola))
