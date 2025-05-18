@@ -1,2 +1,2 @@
-# MenemenBirli-i
-My repository
+Kullanmak için şifrenizi girin onaylıyana kadar
+
